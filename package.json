@@ -19,12 +19,13 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "if-env": "^1.0.4",
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "morgan": "^1.9.0",
     "mysql2": "^1.6.1",
     "path": "^0.12.7",
-    "sequelize": "^4.38.0",
-    "axios": "^0.18.0"
+    "sequelize": "^4.38.0"
   }
 }
