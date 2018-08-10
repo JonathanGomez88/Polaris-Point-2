@@ -14,7 +14,7 @@ var app = express();
 var PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
-var db = require("./models");
+var db = require("./routes/models");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -40,17 +40,15 @@ app.get("*", function (req, res) {
 // Routes
 // =============================================================
 // this is from an old exercise
-require("./routes/api-routes.js")(app);
-// require("./routes/author-api-routes.js")(app);
-// require("./routes/html-routes.js")(app);
+require("./routes/api");
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 const force = process.env.NODE_ENV !== "production";
-const Answer = require("./models/answer.js")
-const Question = require("./models/question.js")
-// Answer.Question = Answer.belongsTo(Question)
-// Question.Answer = Question.hasMany(Answer)
+const Answer = require("./routes/models/answer.js")
+const Question = require("./routes/models/question.js")
+
 db.sequelize.sync({ force: true }).then(function () {
   var seeds = [];
 
@@ -798,7 +796,7 @@ db.sequelize.sync({ force: true }).then(function () {
   // =============================================
   seeds.push(
     db.Question.create({
-      text: "How Do Scientists measure the age of The Earth?",
+      text: "How do geologists measure the age of The Earth?",
       category: "Geology"
     })
     .then(question => {
@@ -827,7 +825,7 @@ db.sequelize.sync({ force: true }).then(function () {
       answers.push(
         db.Answer.create({
           QuestionId: question.get('id'),
-          text: 'Studying trees',
+          text: 'Studying acient trees and plants',
           isCorrect: false
         })
       );
