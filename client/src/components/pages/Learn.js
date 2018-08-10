@@ -1,30 +1,26 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
 
 
 
-const canvasStyle = {
-    height: '400px',
-    width: '750px',
-    background: 'black',
-    marginLeft: '18%',
-    marginRight: '18%'
-}
-
-
-
-
+// const canvasStyle = {
+//     height: '400px',
+//     width: '750px',
+//     background: 'black',
+//     marginLeft: '18%',
+//     marginRight: '18%'
+// }
 
 
 class Learn extends Component {
     state = {
         quiz: [],
         text: '',
-        category: ''
+        category: "Astronomy",
     }
 
-    renderQuiz = () => {
-        API.getQuiz("Astronomy")
+    renderQuiz = (category) => {
+        API.getQuiz(category)
         .then(res =>
             this.setState({
                 quiz: res.data,
@@ -37,18 +33,18 @@ class Learn extends Component {
     }
 
     componentDidMount(){
-        this.renderQuiz();
+        this.renderQuiz(this.state.category);
     }
 
 
     render() {
-        <div>
+        return (<div>
             <h1 className="text-center" > Greetings Humans! </h1> 
             <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Let 's get learning!!! </p>
-                <p>{this.state.books}</p>
+            {this.state.quiz && console.log(this.state.quiz)}
         
                     
-        </div>
+        </div>)
      }
 
 }

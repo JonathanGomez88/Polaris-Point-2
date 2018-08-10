@@ -7,10 +7,12 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var morgan = require("morgan");
 
 // Sets up the Express App
 // =============================================================
 var app = express();
+app.use(morgan('dev'))
 var PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
@@ -33,15 +35,13 @@ app.use(express.static("public"));
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+
 
 // Routes
 // =============================================================
 // this is from an old exercise
-require("./routes/api");
-
+const routes = require("./routes/api");
+app.use('/api', routes)
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
