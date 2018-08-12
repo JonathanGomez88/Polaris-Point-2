@@ -7,13 +7,14 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Accounts from "./components/pages/Accounts";
 import Contact from "./components/pages/Contact";
+import LoginPage from './components/LoginPage/LoginPage';
 
 const App = () => ( 
-    <
-    div >
+    <div>
     <
     NavTabs / >
     <Switch>
+    <Route path="/login" component={LoginPage}/>
     <
     Route exact path = "/"
     component = {
@@ -36,8 +37,7 @@ const App = () => (
     }
     /> 
     </Switch>
-    < /
-    div > 
+    </div > 
 );
 
 export default App;
