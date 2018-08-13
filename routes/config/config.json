@@ -5,7 +5,10 @@
       "database": "polaris_db",
       "host": "localhost",
       "port": 3306,
-      "dialect": "mysql"
+      "dialect": "mysql",
+      "dev-dependencies":{
+       "socket-path":"/Applications/MAMP/tmp/mysql/mysql.sock"
+      }
     },
     "test": {
       "username": "root",

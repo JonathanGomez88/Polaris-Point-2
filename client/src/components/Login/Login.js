@@ -22,24 +22,7 @@ class login extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-    if (!this.state.email) {
-      alert("Input your Email please!");
-    } else if (this.state.password.length < 6) {
-      alert(
-        `Choose a more secure password ${this.state.email}`
-      );
-    } else {
-      alert(`Hello ${this.state.email}`);
-    }
-
-    this.setState({
-      email: "",
-      password: ""
-    });
-  };
+  
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
@@ -65,7 +48,7 @@ class login extends Component {
             placeholder="Password"
           />
           <div></div>
-          <button className="submitButton" onClick={this.handleFormSubmit}>Log In</button>
+          <button className="submitButton" onClick={this.handleSubmit}>Log In</button>
         </form>
       </div>
     );
