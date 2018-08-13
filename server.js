@@ -13,7 +13,7 @@ var morgan = require("morgan");
 // =============================================================
 var app = express();
 app.use(morgan('dev'))
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
 var db = require("./routes/models");
@@ -49,7 +49,7 @@ const force = process.env.NODE_ENV !== "production";
 const Answer = require("./routes/models/answer.js")
 const Question = require("./routes/models/question.js")
 
-db.sequelize.sync({ force: true }).then(function () {
+db.sequelize.sync({ force: (process.env.NODE_ENV !== "production") }).then(function () {
   var seeds = [];
 
   // Table created
