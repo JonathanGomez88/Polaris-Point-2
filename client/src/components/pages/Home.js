@@ -15,7 +15,7 @@ const Home = () => (
                 <div className="row">
                     <div className="col-3 userWidget" id="userWidget">
                         <div className="widgetSprite" id="widgetSprite">
-                            <img id="placeholder" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
+                            <img id="placeholder" alt="profilePicture" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
                         </div>
                         <div className="widgetName" id="widgetName">
                             <h3> Users Name </h3>

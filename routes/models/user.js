@@ -38,5 +38,3 @@ var User = sequelize.define("User", {
 // };
 return User
 }
-// Syncs with DB
-// User.sync();
