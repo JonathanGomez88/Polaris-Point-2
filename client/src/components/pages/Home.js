@@ -9,17 +9,16 @@ const Home = () => (
                         <div className="widgetSprite" id="widgetSprite">
                         </div> 
                         <div className="widgetName" id="widgetName">
-                            <p>
-                                <h3>Dan Jones</h3> 
-                            </p> 
-                            <p className="gemsTotal" id="gemsTotal">
-                                <h6> Gems: 20 </h6> 
-                            </p> 
-                            <p>
+                            <h3>
+                                Dan Jones
+                            </h3> 
+                            
+                                <h6 className="gemsTotal" id="gemsTotal" > Gems: 20 </h6> 
+                            
                                 <h6> My Account </h6> 
-                            </p>
+                            
                             <div className="catalogContainer" id="catalogContainer">
-                                <div className="courseCatalog" id="" courseCatalog>
+                                <div className="courseCatalog" id="courseCatalog" >
                                     <div className="row">
                                         <div className="col">
                                             <h5> My Courses </h5>
@@ -42,27 +41,27 @@ const Home = () => (
                         </div> 
                         <div className="col-9" >
                         <div>
-                            <image src="./img/star3.jpg" alt="name" > </image>
+                            <img src="./img/star3.jpg" alt="name" />
                         </div> 
                         <div className="navbar" id="navbar">
                             <nav className="navbar navbar-expand-lg navbar-light bg-light" >
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent" >
                                     <ul className="navbar-nav mr-auto" >
                                         <li className="nav-item active" >
-                                            <a className="nav-link" href="#" > Home <span className="sr-only" > (current) </span> </a> 
+                                            <a className="nav-link" href="" > Home <span className="sr-only" > (current) </span> </a> 
                                         </li> 
                                         <li className="nav-item dropdown" >
-                                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" dataToggle="dropdown" ariaHaspopup="true" ariaExpanded="false">My Courses </a> 
+                                            <a className="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" dataToggle="dropdown" ariaHaspopup="true" ariaExpanded="false">My Courses </a> 
                                                 <div className="dropdown-menu" ariaLabelledby="navbarDropdown" >
-                                                    <a className="dropdown-item" href="#" > Astronomy 101 </a> 
-                                                    <a className="dropdown-item" href="#" > Geometry 101 </a> 
+                                                    <a className="dropdown-item" href="" > Astronomy 101 </a> 
+                                                    <a className="dropdown-item" href="" > Geometry 101 </a> 
                                                         <div className="dropdown-divider" ></div> 
-                                                    <a className="dropdown-item" href="#" > World Civilization 101 </a> 
+                                                    <a className="dropdown-item" href="" > World Civilization 101 </a> 
                                                 </div> 
                                         </li> 
                                         <li className="nav-item" >
-                                            <a className="nav-link" href="#" > Browse Courses </a> </li > <li className="nav-item" >
-                                            <a className="nav-link"href="#" > Support </a> 
+                                            <a className="nav-link" href="" > Browse Courses </a> </li > <li className="nav-item" >
+                                            <a className="nav-link"href="" > Support </a> 
                                         </li> 
                                     </ul> 
                                     <form className="form-inline my-2 my-lg-0" >
@@ -73,9 +72,7 @@ const Home = () => (
                             </nav> 
                         </div> 
                         <div className="introBanner" id="introBanner" >
-                            <p className="welcomeUser" id="welcomeUser" >
-                                <h2 id="welcomeUsername" > Welcome: Dan Jones </h2> 
-                            </p> 
+                            <h2 id="welcomeUsername" > Welcome: Dan Jones </h2> 
                         </div> 
                         <div>
                             <div className="container">

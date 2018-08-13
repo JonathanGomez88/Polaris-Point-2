@@ -34,6 +34,11 @@ class login extends Component {
       alert(`Hello ${this.state.email}`);
     }
 
+    // A route doing a get to the database to find a user with matching username and password
+    
+        // If there's an error, log the error
+     
+// localStorage.setItem("user", username)
     this.setState({
       email: "",
       password: ""
@@ -50,10 +55,10 @@ class login extends Component {
         <form className="form">
           <input
             value={this.state.email}
-            name="firstName"
+            name="email"
             onChange={this.handleInputChange}
-            type="text"
-            placeholder="First Name"
+            type="email"
+            placeholder="Email"
           />
           <input
             value={this.state.password}
@@ -67,6 +72,9 @@ class login extends Component {
       </div>
     );
   }
+
+
+
 }
 
 export default login;
