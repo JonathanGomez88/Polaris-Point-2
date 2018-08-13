@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./login.css"
 
 class login extends Component {
   // Setting the component's initial state
   state = {
-    email:"",
+    email: "",
     password: ""
   };
 
@@ -43,26 +44,28 @@ class login extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div>
-        <p>
+      <div className="content">
+        <p className="introduction">
           Please Log In! If you dont have a Login Please Sign Up {this.state.email}
         </p>
         <form className="form">
-          <input
+          <input className="input"
             value={this.state.email}
             name="firstName"
             onChange={this.handleInputChange}
             type="text"
             placeholder="First Name"
           />
-          <input
+          <div></div>
+          <input className="input"
             value={this.state.password}
             name="password"
             onChange={this.handleInputChange}
             type="password"
             placeholder="Password"
           />
-          <button onClick={this.handleFormSubmit}>Log In</button>
+          <div></div>
+          <button className="submitButton" onClick={this.handleFormSubmit}>Log In</button>
         </form>
       </div>
     );

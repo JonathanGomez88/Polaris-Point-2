@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import "./loginPage.css"
 
 class Form extends Component {
   // Setting the component's initial state
   state = {
     firstName: "",
     lastName: "",
-    email:"",
+    email: "",
     password: ""
   };
 
@@ -40,7 +41,7 @@ class Form extends Component {
     this.setState({
       firstName: "",
       lastName: "",
-      email:"",
+      email: "",
       password: ""
     });
   };
@@ -48,12 +49,12 @@ class Form extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div>
-        <p>
+      < div className="content" >
+        <p className="introduction">
           Please Enter Your Info To Sign Up {this.state.firstName} {this.state.lastName}
         </p>
         <form className="form">
-          <input
+          <input className="input"
             value={this.state.firstName}
             name="firstName"
             onChange={this.handleInputChange}
@@ -61,7 +62,7 @@ class Form extends Component {
             placeholder="First Name"
           />
           <div></div>
-          <input
+          <input className="input"
             value={this.state.lastName}
             name="lastName"
             onChange={this.handleInputChange}
@@ -69,15 +70,15 @@ class Form extends Component {
             placeholder="Last Name"
           />
           <div></div>
-          <input
-          value={this.state.email}
-          name="email"
-          onChange={this.handleInputChange}
-          type="email"
-          placeholder="Email"
-        />
-        <div></div>
-          <input
+          <input className="input"
+            value={this.state.email}
+            name="email"
+            onChange={this.handleInputChange}
+            type="email"
+            placeholder="Email"
+          />
+          <div></div>
+          <input className="input"
             value={this.state.password}
             name="password"
             onChange={this.handleInputChange}
@@ -85,9 +86,9 @@ class Form extends Component {
             placeholder="Password"
           />
           <div></div>
-          <button onClick={this.handleFormSubmit}>Sign Up</button>
+          <button className="submitButton" onClick={this.handleFormSubmit}>Sign Up</button>
         </form>
-      </div>
+      </div >
     );
   }
 }
