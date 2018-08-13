@@ -7,35 +7,20 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Accounts from "./components/pages/Accounts";
 import Contact from "./components/pages/Contact";
-import LoginPage from './components/LoginPage/LoginPage';
+import Form from './components/SignUp/LoginPage';
+import login from './components/Login/Login';
 
 const App = () => ( 
     <div>
     <
-    NavTabs / >
+    NavTabs/>
     <Switch>
-    <Route path="/login" component={LoginPage}/>
-    <
-    Route exact path = "/"
-    component = {
-        Home
-    }
-    /> <
-    Route exact path = "/about"
-    component = {
-        About
-    }
-    /> <
-    Route exact path = "/accounts"
-    component = {
-        Accounts
-    }
-    /> <
-    Route path = "/contact"
-    component = {
-        Contact
-    }
-    /> 
+    <Route path="/login" component={login}/>
+    <Route path="/SignUp" component={Form}/>
+    <Route exact path = "/" component = {Home}/> 
+    <Route exact path = "/about" component = {About}/> 
+    <Route exact path = "/accounts" component = {Accounts}/> 
+    <Route path = "/contact" component = {Contact}/> 
     </Switch>
     </div > 
 );

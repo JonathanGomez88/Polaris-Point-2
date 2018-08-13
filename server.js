@@ -13,7 +13,7 @@ var morgan = require("morgan");
 // =============================================================
 var app = express();
 app.use(morgan('dev'))
-var PORT = process.env.PORT || 3001;
+var PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
 var db = require("./routes/models");
