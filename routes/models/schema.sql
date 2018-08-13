@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS polaris_db;
+CREATE DATABASE polaris_db;
