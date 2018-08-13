@@ -18,14 +18,8 @@ const Home = () => (
                             <img id="placeholder" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
                         </div>
                         <div className="widgetName" id="widgetName">
-                            <p>
-                            </p><h3>User's Name</h3>
-                            <p />
-                            <p className="gemsTotal" id="gemsTotal">
-                            </p><h6>Gems: 20</h6>
-                            <p />
-                            <p>
-                            </p>
+                            <h3> Users Name </h3>
+                            <h6 className="gemsTotal" id="gemsTotal">Gems: 20</h6>
                             <br />
                             <div className="catalogContainer" id="catalogContainer">
                                 <div className="courseCatalog" id="coursecatalog">
@@ -55,9 +49,7 @@ const Home = () => (
                             <img src="./img/star3.jpg" alt="name" />
                         </div>
                         <div className="introBanner" id="introBanner">
-                            <p className="welcomeUser" id="welcomeUser">
-                            </p><h2 id="welcomeUsername">Welcome: Dan Jones</h2>
-                            <p />
+                        <h2 id="welcomeUsername">Welcome: Dan Jones</h2>
                         </div>
                         <div>
                             <div className="container">
