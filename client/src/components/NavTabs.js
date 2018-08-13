@@ -5,7 +5,11 @@ import {
 
 const NavTabs = () => ( 
     <ul className = "nav nav-tabs" >
-        <li className="nav-item"><Link to="login" 
+        <li className="nav-item"><Link to="/SignUp" 
+        className = {
+            window.location.pathname === "/SignUp" ? "nav-link active" : "nav-link"}
+            >Sign Up</Link></li>
+            <li className="nav-item"><Link to="/login" 
         className = {
             window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
             >Login</Link></li>
