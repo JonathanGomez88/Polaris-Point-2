@@ -11,4 +11,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  signUpNewUser: function(req, res) {
+    console.log(req.body)
+    db.User
+      .create(req.body)
+      .then(response => {
+        res.json(response)
+      })
+      .catch(err => console.log(err))
+  }
 }
