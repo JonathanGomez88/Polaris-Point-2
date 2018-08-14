@@ -7,11 +7,19 @@ const QuizQuestion = (props) => (
     <p>{props.quiz.text}</p>
 
     <form >
-        <input type="radio" value={props.isCorrect} name={props.questionNum} />
-        <input type="radio" value={props.isCorrect} name={props.questionNum} />
-        <input type="radio" value={props.isCorrect} name={props.questionNum} />
-        <input type ="radio" value={props.isCorrect} name={props.questionNum} />
-        <input type="submit" className="formSubmit" />
+        <div>
+            {props.quiz.Answers.map((answer) => {
+                return (
+                    <div>
+                        <input id={answer.id} type="radio" value={answer.isCorrect} name={props.questionNum} />
+                        <label htmlFor={answer.id}>{answer.text}</label>
+                    </div>
+                )
+            })}
+            
+
+            <input type="submit" className="formSubmit" />
+        </div>
 
     </form>
 
