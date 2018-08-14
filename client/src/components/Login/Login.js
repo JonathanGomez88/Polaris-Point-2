@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import "./login.css"
-
+import axios from 'axios'
 class login extends Component {
   // Setting the component's initial state
   state = {
@@ -22,7 +24,7 @@ class login extends Component {
     });
   };
 
-  handleFormSubmit = event => {
+  handleFormSubmit = (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     if (!this.state.email) {
@@ -34,39 +36,54 @@ class login extends Component {
     } else {
       alert(`Hello ${this.state.email}`);
     }
-
-    this.setState({
-      email: "",
-      password: ""
-    });
+     // axios.get route to find user by email
+    axios.get(`/api/user/${this.state.email}`)
+        .then(res => {
+            console.log(res)
+            this.props.grabUserInfo(res.data[0])
+            this.setState({
+              email: "",
+              password: ""
+            });
+            this.props.history.push('/about')
+        })
+        .catch(err => {
+            console.log(err)
+        })
+  
   };
+
+  
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
-    return (
+    return ( 
       <div className="content">
-        <p className="introduction">
-          Please Log In! If you dont have a Login Please Sign Up {this.state.email}
-        </p>
-        <form className="form">
-          <input className="input"
-            value={this.state.email}
-            name="email"
-            onChange={this.handleInputChange}
-            type="email"
-            placeholder="email"
-          />
-          <div></div>
-          <input className="input"
-            value={this.state.password}
-            name="password"
-            onChange={this.handleInputChange}
-            type="password"
-            placeholder="Password"
-          />
-          <div></div>
-          <button className="submitButton" onClick={this.handleFormSubmit}>Log In</button>
-        </form>
+        <p className="introduction"> Please Log In! If you dont have a Login Please Sign Up</p> 
+      <form className = "form" >
+      <input className="input" value={this.state.email} name="email" onChange = {this.handleInputChange}
+      type = "email"
+      placeholder = "email" />
+      <div> 
+      </div> 
+      <input className = "input"
+      value = {
+        this.state.password
+      }
+      name = "password"
+      onChange = {
+        this.handleInputChange
+      }
+      type = "password"
+      placeholder = "Password" />
+      <div> 
+      </div> 
+      <button className = "submitButton"
+      onClick = {
+          this.handleFormSubmit
+      }> Log In 
+      </button> 
+      </form> 
       </div>
     );
   }

@@ -1,7 +1,8 @@
 import React from "react";
 import "./Home.css"
 
-const Home = () => (
+const Home = (props) => (
+    
     <div>
         <div className="head" id="head">
             <header>
@@ -16,11 +17,16 @@ const Home = () => (
 
                     <div className="col-3 userWidget" id="userWidget">
                         <div className="widgetSprite" id="widgetSprite">
-                            <img id="placeholder" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
+                            <img id="placeholder" alt="profilePicture" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
                         </div>
                         <div className="widgetName" id="widgetName">
+
                             <h3> Users Name </h3>
                             <h6 className="gemsTotal" id="gemsTotal">My Account</h6>
+
+                            <h3> {props.user.firstName}</h3>
+                            <h6 className="gemsTotal" id="gemsTotal">Gems: 20</h6>
+
                             <br />
                             <div className="catalogContainer" id="catalogContainer">
                                 <div className="courseCatalog" id="coursecatalog">
@@ -47,6 +53,9 @@ const Home = () => (
 
                     </div>
                     <div className="col-8">
+                        <div className="introBanner" id="introBanner">
+                        <h2 id="welcomeUsername">Welcome: {props.user.email}</h2>
+                        </div>
 
                         <div>
                             <div className="container">

@@ -1,4 +1,5 @@
 .nav {
+
     background-color: #faf6e1 !important;
     /* box-shadow: 5px 5px 10px rgb(67, 50, 94); */
 }
@@ -12,4 +13,7 @@
     color: #faf6e1 !important;
     border-color: transparent !important;
     text-decoration: underline;
+
+    background-color: white !important;
+    
 }
