@@ -8,6 +8,14 @@
 module.exports = function(sequelize, DataTypes) {
 
 var User = sequelize.define("User", {
+  firstName: {
+    type: DataTypes.STRING,
+    notNull: true
+  },
+  lastName: {
+    type: DataTypes.STRING,
+    notNull: true
+  },
   email: {
     type: DataTypes.STRING,
     notNull: true
@@ -20,21 +28,19 @@ var User = sequelize.define("User", {
       }
   },
   gems: {
-    type: DataTypes.INTEGER,
-    notNull: true
+    type: DataTypes.INTEGER
   },
   canEarn: {
     type: DataTypes.BOOLEAN,
-    default: false,
-    notNull: true
+    default: false
   }
 })
-// User.associate = function(models) {
+User.associate = function(models) {
   // Associating Author with Posts
   // When an Author is deleted, also delete any associated Posts
-//   User.hasMany(models.ScoreCard, {
-//     onDelete: "cascade"
-//   });
-// };
+  User.hasMany(models.ScoreCard, {
+    onDelete: "cascade"
+  });
+};
 return User
 }

@@ -1,23 +1,17 @@
 import React from "react";
 
 
-const quizQuestion = () => (
+const QuizQuestion = (props) => (
      <div >
- <form >
-    <input type = "radio"
-    value = "{isCorrect}"
-    name = "question" / >
-    <input type = "radio"
-    value = "{isCorrect}"
-    name = "question" / >
-    <input type = "radio"
-    value = "{isCorrect}"
-    name = "question" / >
-    <input type = "radio"
-    value = "{isCorrect}"
-    name = "question" / >
-    <input type = "submit"
-    className = "formSubmit" / >
+         
+    <p>{props.quiz.text}</p>
+
+    <form >
+        <input type="radio" value={props.isCorrect} name={props.questionNum} />
+        <input type="radio" value={props.isCorrect} name={props.questionNum} />
+        <input type="radio" value={props.isCorrect} name={props.questionNum} />
+        <input type ="radio" value={props.isCorrect} name={props.questionNum} />
+        <input type="submit" className="formSubmit" />
 
     </form>
 
@@ -26,4 +20,4 @@ const quizQuestion = () => (
     </div>
 );
 
-export default quizQuestion;
+export default QuizQuestion;

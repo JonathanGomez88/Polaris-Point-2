@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import quizQuestion from "../pageComponents/quizQuestions";
+import QuizQuestion from "../pageComponents/QuizQuestions";
 
 
 
@@ -43,11 +43,15 @@ class Learn extends Component {
             <h1 className="text-center" > Welcome Polarians! </h1> 
             <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Lets get learning!!! </p>
             {this.state.quiz && console.log(this.state.quiz)}
-            {this.state.quiz.map(x => document.write(x.text))} 
+     
+            {this.state.quiz &&
+            <div> {this.state.quiz.map((question, iterator) => {
+                console.log(question)
+                return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
+            })} </div>
+            }   
 
-            <div> {quizQuestion} </div>
-
-            {this.state.quiz.map(x => document.write(x.Answers[0].text, x.Answers[1].text, x.Answers[2].text, x.Answers[3].text))}
+            
 
             </div>)
      }
