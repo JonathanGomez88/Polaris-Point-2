@@ -8,18 +8,28 @@ import Accounts from "./components/pages/Accounts";
 import Contact from "./components/pages/Contact";
 import Login from './components/Login/Login';
 import SignUpPage from "./components/SignUp/SignUpPage";
+import NavSignedIn from "./components/NavSignedIn";
+import NavSignedOut from "./components/NavSignedOut";
 
 
 class App extends React.Component {
     state = {
         user: {},
+        auth: false
     }
 
 
     grabUserInfo = (user) => {
-        console.log(user)
         this.setState({
-            user: user
+            user: user,
+            auth: true
+        })
+    }
+
+    logOutUser = () => {
+        this.setState({
+            user: {},
+            auth: false
         })
     }
 
@@ -28,7 +38,8 @@ class App extends React.Component {
        return (
         <div>
     
-            <NavTabs/>
+            {console.log(this.state.auth)}
+            {this.state.auth ? <NavSignedIn logOutUser={this.logOutUser}/> : <NavSignedOut/>}
             <Switch>
                 <Route path="/login" render={() => <Login grabUserInfo={this.grabUserInfo}/>}/>
                 <Route path="/SignUp" component={SignUpPage}/>

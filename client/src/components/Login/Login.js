@@ -1,8 +1,11 @@
 import React, {
   Component
 } from "react";
-import "./login.css"
-import axios from 'axios'
+import { Link } from "react-router-dom";
+import "./login.css";
+import axios from 'axios';
+
+
 class login extends Component {
   // Setting the component's initial state
   state = {
@@ -33,9 +36,7 @@ class login extends Component {
       alert(
         `Choose a more secure password ${this.state.email}`
       );
-    } else {
-      alert(`Hello ${this.state.email}`);
-    }
+    } 
      // axios.get route to find user by email
     axios.get(`/api/user/${this.state.email}`)
         .then(res => {
@@ -45,7 +46,7 @@ class login extends Component {
               email: "",
               password: ""
             });
-            this.props.history.push('/about')
+            
         })
         .catch(err => {
             console.log(err)
@@ -78,11 +79,14 @@ class login extends Component {
       placeholder = "Password" />
       <div> 
       </div> 
-      <button className = "submitButton"
-      onClick = {
-          this.handleFormSubmit
-      }> Log In 
-      </button> 
+
+      
+        <button className = "submitButton" onClick = {this.handleFormSubmit}> 
+        <Link to ="/">
+          Log In 
+          </Link>
+        </button> 
+      
       </form> 
       </div>
     );

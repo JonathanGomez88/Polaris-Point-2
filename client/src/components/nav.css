@@ -17,3 +17,11 @@
     background-color: white !important;
     
 }
+
+.signedout {
+    column-count: 7
+}
+
+.signedin {
+    column-count: 6
+}
