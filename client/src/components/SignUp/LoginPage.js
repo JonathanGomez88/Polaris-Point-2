@@ -86,7 +86,7 @@ class Form extends Component {
             placeholder="Password"
           />
           <div></div>
-          <button className="submitButton" onClick={this.handleFormSubmit}>Sign Up</button>
+          <button className="submitButton" onClick={this.handleSubmit}>Sign Up</button>
         </form>
       </div >
     );

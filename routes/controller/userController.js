@@ -12,14 +12,3 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 }
-module.exports = {
-    findAllWherePasswordMatches: function(req, res) {
-      console.log(req.params.password)
-      db.User
-        .findAll({where: {
-          password: req.params.password
-        }})
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
-    },
-  }
