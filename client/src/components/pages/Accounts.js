@@ -49,7 +49,7 @@ const Accounts = () => (
                         <div>
                             <div className="container">
                                 <div className="introBanner" id="introBanner">
-                                    <h2 id="welcomeUsername">My Account</h2>
+                                    <h2 id="welcome">My Account</h2>
                                 </div>
                                 <div className="blog" id="blog">
                                     <div className="blogHeader" id="blogHeader">

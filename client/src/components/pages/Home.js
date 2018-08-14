@@ -51,7 +51,7 @@ const Home = () => (
                         <div>
                             <div className="container">
                                 <div className="introBanner" id="introBanner">
-                                    <h2 id="welcomeUsername">Welcome: Dan Jones</h2>
+                                    <h2 id="welcome">Welcome: Dan Jones</h2>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm">
