@@ -40,9 +40,9 @@ const NavSignedOut = () => {
                 } >
                 Contact </Link> </li>
         <li className="nav-item" >
-            <Link to="/contact/learn"
+            <Link to="/learn"
                 className={
-                    window.location.pathname === "/contact/learn" ? "nav-link active" : "nav-link"
+                    window.location.pathname === "/learn" ? "nav-link active" : "nav-link"
                 } >
                 Learn </Link>
         </li>
