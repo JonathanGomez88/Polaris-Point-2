@@ -13,13 +13,14 @@ const Home = () => (
         <div className="container-fluid">
             <div>
                 <div className="row">
+
                     <div className="col-3 userWidget" id="userWidget">
                         <div className="widgetSprite" id="widgetSprite">
                             <img id="placeholder" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
                         </div>
                         <div className="widgetName" id="widgetName">
                             <h3> Users Name </h3>
-                            <h6 className="gemsTotal" id="gemsTotal">Gems: 20</h6>
+                            <h6 className="gemsTotal" id="gemsTotal">My Account</h6>
                             <br />
                             <div className="catalogContainer" id="catalogContainer">
                                 <div className="courseCatalog" id="coursecatalog">
@@ -43,16 +44,15 @@ const Home = () => (
                         <div className="findCourseWidget" id="findCourseWidget">
                             <button type="button" className="btn btn-primary" id="findCourseButton">Start/Unlock New Course</button>
                         </div>
+
                     </div>
-                    <div className="col-9">
-                        <div>
-                            <img src="./img/star3.jpg" alt="name" />
-                        </div>
-                        <div className="introBanner" id="introBanner">
-                        <h2 id="welcomeUsername">Welcome: Dan Jones</h2>
-                        </div>
+                    <div className="col-8">
+
                         <div>
                             <div className="container">
+                                <div className="introBanner" id="introBanner">
+                                    <h2 id="welcomeUsername">Welcome: Dan Jones</h2>
+                                </div>
                                 <div className="row">
                                     <div className="col-sm">
                                         <button type="button" className="btn btn-primary containerButtons">Continue Course</button>
