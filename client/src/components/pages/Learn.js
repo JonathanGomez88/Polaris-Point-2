@@ -22,39 +22,39 @@ class Learn extends Component {
 
     renderQuiz = (category) => {
         API.getQuiz(category)
-        .then(res =>
-            this.setState({
-                quiz: res.data,
-                text: "",
-                category: ""
-            })
-        ).catch(err => {
-            console.log(err)
-        });
+            .then(res =>
+                this.setState({
+                    quiz: res.data,
+                    text: "",
+                    category: ""
+                })
+            ).catch(err => {
+                console.log(err)
+            });
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.renderQuiz(this.state.category);
     }
 
 
     render() {
         return (<div>
-            <h1 className="text-center" > Welcome Polarians! </h1> 
+            <h1 className="text-center" > Welcome Polarians! </h1>
             <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Lets get learning!!! </p>
             {this.state.quiz && console.log(this.state.quiz)}
-     
+
             {this.state.quiz &&
+
             <div> {this.state.quiz.map((question, iterator) => {
                 console.log(question)
                 return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
             })} </div>
-            }   
+            }    
+           
 
-            
-
-            </div>)
-     }
+        </div>)
+    }
 
 }
 export default Learn;
