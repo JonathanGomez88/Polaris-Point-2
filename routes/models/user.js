@@ -8,6 +8,14 @@
 module.exports = function(sequelize, DataTypes) {
 
 var User = sequelize.define("User", {
+  firstName: {
+    type: DataTypes.STRING,
+    notNull: true
+  },
+  lastName: {
+    type: DataTypes.STRING,
+    notNull: true
+  },
   email: {
     type: DataTypes.STRING,
     notNull: true
@@ -20,13 +28,11 @@ var User = sequelize.define("User", {
       }
   },
   gems: {
-    type: DataTypes.INTEGER,
-    notNull: true
+    type: DataTypes.INTEGER
   },
   canEarn: {
     type: DataTypes.BOOLEAN,
-    default: false,
-    notNull: true
+    default: false
   }
 })
 // User.associate = function(models) {

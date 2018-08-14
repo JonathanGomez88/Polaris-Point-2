@@ -7,7 +7,7 @@
       "port": 3306,
       "dialect": "mysql",
       "dialectOptions":{
-      "socketPath":"/Applications/MAMP/tmp/mysql/mysql.sock"
+        "socketPath":"/Applications/MAMP/tmp/mysql/mysql.sock"
       }
     },
     "test": {

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./loginPage.css"
+import axios from 'axios';
+import "./loginPage.css";
 
-class Form extends Component {
+class SignUpPage extends Component {
   // Setting the component's initial state
   state = {
     firstName: "",
@@ -24,6 +25,7 @@ class Form extends Component {
     });
   };
 
+
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
@@ -35,15 +37,22 @@ class Form extends Component {
           .lastName}`
       );
     } else {
-      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+      axios.post("/api/user/signup", this.state)
+        .then(res => {
+            console.log(res)
+            this.setState({
+              firstName: "",
+              lastName: "",
+              email: "",
+              password: ""
+            });
+            this.props.history.push('/login')
+          }).catch(err =>{
+            console.log(err)
+          })
     }
 
-    this.setState({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: ""
-    });
+    
   };
 
   render() {
@@ -86,11 +95,11 @@ class Form extends Component {
             placeholder="Password"
           />
           <div></div>
-          <button className="submitButton" onClick={this.handleSubmit}>Sign Up</button>
+          <button className="submitButton" onClick={this.handleFormSubmit}>Sign Up</button>
         </form>
       </div >
     );
   }
 }
 
-export default Form;
+export default SignUpPage;
