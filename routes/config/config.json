@@ -5,11 +5,8 @@
       "database": "polaris_db",
       "host": "localhost",
       "port": 3306,
-      "dialect": "mysql",
-      "dialectOptions":{
-        "socketPath":"/Applications/MAMP/tmp/mysql/mysql.sock"
-      }
-    },
+      "dialect": "mysql"
+      },
     "test": {
       "username": "root",
       "password": null,
