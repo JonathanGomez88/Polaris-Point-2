@@ -45,13 +45,13 @@ class Learn extends Component {
             {this.state.quiz && console.log(this.state.quiz)}
 
             {this.state.quiz &&
-                <div> {this.state.quiz.map((question, iterator) => {
-                    console.log(question)
-                    return <QuizQuestion key={iterator} questionNum={iterator} quiz={question} />
-                })} </div>
-            }
 
-
+            <div> {this.state.quiz.map((question, iterator) => {
+                console.log(question)
+                return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
+            })} </div>
+            }    
+           
 
         </div>)
     }
