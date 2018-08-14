@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 
-    var ScoreCard = sequelize.define("User", {
+    var ScoreCard = sequelize.define("ScoreCard", {
       category: {
         type: DataTypes.STRING,
         notNull: true
@@ -11,8 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       },
     })
     ScoreCard.associate = function(models) {
-        // We're saying that a Post should belong to an Author
-        // A Post can't be created without an Author due to the foreign key constraint
+       
         ScoreCard.belongsTo(models.User, {
           foreignKey: {
             allowNull: false
