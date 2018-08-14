@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css"
 
 const Home = (props) => (
-    
+
     <div>
         <div className="head" id="head">
             <header>
@@ -53,14 +53,11 @@ const Home = (props) => (
 
                     </div>
                     <div className="col-8">
-                        <div className="introBanner" id="introBanner">
-                        <h2 id="welcomeUsername">Welcome: {props.user.email}</h2>
-                        </div>
 
                         <div>
                             <div className="container">
                                 <div className="introBanner" id="introBanner">
-                                    <h2 id="welcome">Welcome: Dan Jones</h2>
+                                    <h2 id="welcomeUsername">Welcome: {props.user.email}</h2>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm">
