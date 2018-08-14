@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -10,102 +11,129 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="icon" type="icon/ico" href="%PUBLIC_URL%/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link
-     href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.3.0/css/okta-sign-in.min.css"
-      type="text/css"
-      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.3.0/css/okta-sign-in.min.css" type="text/css"
+        rel="stylesheet" />
 
     <!-- Theme file: Customize or replace this file if you want to override our default styles -->
-    <link
-      href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.3.0/css/okta-theme.css"
-      type="text/css"
-      rel="stylesheet"/>
-    
-  <style> 
+    <link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.3.0/css/okta-theme.css" type="text/css" rel="stylesheet"
+    />
+
+    <style>
+        html {
+            background: linear-gradient(to bottom, #5a2c85, #2f144b) !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: transparent;
+        }
+
+        h2 {
+            margin-left: 15px;
+        }
+
+        .userWidget {
+            background-color: #faf6e1;
+            background-image: url(https://imgur.com/a/ZzUbm0Q);
+            color: #333333;
+            height: 600px;
+            box-shadow: 5px 5px 10px rgb(48, 37, 68);
+            width: 300px;
+            margin-top: 25px;
+            margin-left: 40px;
+        }
+
+        .widgetName {
+            text-align: center;
+        }
+
+        .col-8 {
+            margin-top: 25px;
+        }
 
 
-  body {font-family: 'Modern Antiqua', cursive;}
-  
-h2 {
-    margin-left: 15px;
-}
+        .container {
+            background-color: #faf6e1;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            box-shadow: 5px 5px 10px rgb(48, 37, 68);
+            margin-left: 40x;
+        }
 
-.userWidget {
-    background: linear-gradient(#4439ac,#2f2685) !important;
-    color: #ffffff;
-    height: 700px;
-    border-style: solid; 
-    border-width: 10px;
-    border-color: #ffffff;
-    /* margin-top: 10px;
-    margin-left: 10px; */
-    
-}
-.widgetName {
-    text-align: center;
-}
+        .catalogContainer {
+            background-color: #f5f5f5;
+            color: #2c2c2c;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #e6e6e6;
+        }
 
-.catalogContainer {
-    background-color: #f5f5f5;
-    color: #2c2c2c;
-    border-style: solid; 
-    border-width: 3px;
-    border-color: #e6e6e6;
-}
-.col-8 {
-    overflow: auto;
-}
+        .col-8 {
+            padding-left: 50px;
+        }
 
-.containerButtons {
-    font-size: 24px;
-    width: 100%;
-    background-color: #4439ac;
-}
+        .containerButtons {
+            font-size: 24px;
+            width: 100%;
+            background-color: #4439ac;
+        }
 
-.blog {
-    margin-top: 50px;
-}
+        .blog {
+            margin-top: 50px;
+        }
 
-.login {
-    width: 500px;
-    margin: auto;
-}
+        .login {
+            width: 500px;
+            margin: auto;
+        }
 
-/* #navbar {
-    float: right;
-} */
+        .aboutContent {
+            width: 1000px;
+            margin: auto;
+            background-color: #faf6e1;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
 
-#body {
-    background: linear-gradient(#4439ac,#2f2685) !important;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+        #body {
+            background: linear-gradient(#4439ac, #2f2685) !important;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
 
-}
+        }
 
-#logo {
-    background: url(img/star3.png);
-    background-size: auto;
-}
+        #logo {
+            background: url(img/star3.png);
+            background-size: auto;
+        }
 
-#placeholder {
-    clear: both !important;
-    height:150 px;
-    width: 150px;
-    margin-top: 20px;
-    margin-left: 30%;
-    margin-right: 60%;
-}
+        #placeholder {
+            clear: both !important;
+            height: 150 px;
+            width: 150px;
+            margin-top: 20px;
+            margin-left: 30%;
+            margin-right: 60%;
+        }
 
-#findCourseButton {
-    margin-top: 20px;
-    margin-left: 25% !important;
-    margin-right: 75% !important;
-}
+        #welcome {
+            text-align: center;
+        }
 
-</style>
+        #findCourseButton {
+            margin-top: 20px;
+            margin-left: 20% !important;
+            margin-right: 80% !important;
+        }
+    </style>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -116,15 +144,17 @@ h2 {
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <noscript>
-      You need to enable JavaScript to run this app.
+        You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
     -->
-  </body>
+</body>
+
 </html>
