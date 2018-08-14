@@ -49,8 +49,7 @@ class Learn extends Component {
                 console.log(question)
                 return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
             })} </div>
-            }   
-
+            }    
             
 
             </div>)
