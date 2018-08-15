@@ -95,7 +95,7 @@ class SignUpPage extends Component {
             placeholder="Password"
           />
           <div></div>
-          <button className="submitButton" onClick={this.handleFormSubmit}>Sign Up</button>
+          <button className="signinButton" onClick={this.handleFormSubmit}>Sign Up</button>
         </form>
       </div >
     );

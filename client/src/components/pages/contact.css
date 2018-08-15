@@ -16,3 +16,10 @@
     margin-left: 40x;
 }
 
+input {
+ width: 300px;
+}
+
+textarea {
+    width: 300px;
+}
