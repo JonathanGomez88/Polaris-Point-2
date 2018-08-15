@@ -57,10 +57,10 @@ const Contact = props => (
                             <textarea id="subject" name="subject" placeholder="Write something.." />
                         </div>
                         <div>
-                            <button type="button" className="btn btn-primary submitButton">Submit</button>
+                            <button type="button" className="btn btn-primary ">Submit</button>
                         </div>
                         <div className="thankYouContact">
-                            <p>Thank you for taking the time to contact Polaris Point, please allow a few hours to one day for Polaris Point to respond. We are here to serve you for the best possible educational experience. Thank you and happy learning!</p>
+                            <p>Thank you for taking the time to contact Polaris Point, please allow a few hours to one day for Polaris Point to respond. We are here to give you the best possible educational experience. Thank you and happy learning!</p>
                         </div>
 
                     </form>
