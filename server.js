@@ -638,6 +638,592 @@ db.sequelize.sync({ force: true }).then(function () {
         return Promise.all(answers);
       })
   );
+<<<<<<< HEAD
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What is Geology?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Geology is the study of the Earth and everything that makes up the planet',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The study of the stars',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The study of the weather',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The study of the moon phases',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ===============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What is the first layer of the Earth called?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The Crust',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The Mantle',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The Core',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The Atmosphere',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // //================================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What is the core Made out of?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Iron',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Steel',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Copper',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Rock',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ===================================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What is the theory to describe how the Earth's Crust moves?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Theory of plate tectonics',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Theory of earthquakes',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Theory of relativity',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Theory of land movements',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // =============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "How do geologists measure the age of The Earth?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Studying rocks and fossils',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Studying microbes',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Studying the oceans',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Studying acient trees and plants',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ===============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "How old is the earth in years?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: '4 Billion',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: '40 Billion',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: '400 Billion',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: '4 Million',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // =================================================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "How many types of rocks are there?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Three',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Five',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Four',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Two',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ================================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What is the Rock Cylce?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Way to describe how rocks transform into one another',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'When rocks are moved from the ground',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'When rocks move from place to place',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'How old the rocks are',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ==================================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "How are landforms created?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'The rocks and minerals found on earth',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Erosion',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Theory of Plate Tectonics',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Human interference',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ===============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What type of landforms do plate tectonics create?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Mountains and Trenches',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Rivers',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Oceans',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Valleys',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // =======================================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "What are types of weathering?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Wind and rain',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Humans',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Aniamls',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Plate Tectonics',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ==============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "Why do landslides occur?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Changes in fault lines',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Too much sediment',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Bad Weathering',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Human interference',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ==============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "In what ways do we use Rocks and Minerals?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'All correct',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Energy',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Tools',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Jewelry',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // ===============================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "Which mineral is part of our daily diet?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Salt',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Calcium',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Zinc',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Potasium',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+  // // =========================================
+  // seeds.push(
+  //   db.Question.create({
+  //     text: "Which types of natural disasters can occur due to the geological makeup of the land?",
+  //     category: "Geology"
+  //   })
+  //   .then(question => {
+  //     const answers = [];
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'All correct',
+  //         isCorrect: true,
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Tsunamis',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Earthquakes',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     answers.push(
+  //       db.Answer.create({
+  //         QuestionId: question.get('id'),
+  //         text: 'Volcanoes',
+  //         isCorrect: false
+  //       })
+  //     );
+  //     return Promise.all(answers);
+  //   })
+  // );
+=======
   seeds.push(
     db.Question.create({
       text: "What is Geology?",
@@ -1222,6 +1808,7 @@ db.sequelize.sync({ force: true }).then(function () {
         return Promise.all(answers);
       })
   );
+>>>>>>> 5232eef1c171a18857edd2fdddb2baf1d8038c5b
   // =========================================================
   app.listen(PORT, function () {
     console.log(`🌎 ==> Server now on port ${PORT}!`);
