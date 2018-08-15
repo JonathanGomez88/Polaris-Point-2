@@ -58,7 +58,6 @@ class Learn extends Component {
                 endQuiz: true
             })
         }
-
         }
 
     handleCorrect = () => {
