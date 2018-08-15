@@ -3,16 +3,6 @@ import API from "../utils/API";
 import QuizQuestion from "../pageComponents/quizQuestions";
 
 
-
-// const canvasStyle = {
-//     height: '400px',
-//     width: '750px',
-//     background: 'black',
-//     marginLeft: '18%',
-//     marginRight: '18%'
-// }
-
-
 class Learn extends Component {
     state = {
         quiz: [],
