@@ -18,42 +18,99 @@ class Learn extends Component {
         quiz: [],
         text: '',
         category: "Astronomy",
+        index: 0
     }
 
     renderQuiz = (category) => {
+        console.log("RENDER QUIZ RAN");
         API.getQuiz(category)
-            .then(res =>
-                this.setState({
-                    quiz: res.data,
-                    text: "",
-                    category: ""
-                })
+            .then(res => {
+                console.log("this is our res. data ", res.data)
+
+                if(res.data.length > 1){
+                    console.log("this is running");
+                    this.setState({
+                        quiz: res.data,
+                        text: res.data[0].text,
+                        index: 0,
+                        category: "Astronomy"
+                    })}
+                }
+                
             ).catch(err => {
                 console.log(err)
             });
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.renderQuiz(this.state.category);
+    
     }
 
+    handleClick = () => {
+
+        let updatedIndex = this.state.index + 1;
+
+        if(this.state.index < this.state.quiz.length - 1){
+            this.setState({
+                index: updatedIndex,
+                text: this.state.quiz[updatedIndex].text
+            })
+        }else{
+            // put in a results page here
+
+        }
+
+    }
+        
+    //     if (this.state.index === this.state.quiz.length - 1){
+    //        this.setState({
+    //           index: 0
+    //          })
+    //     }
+    //     else{
+    //         this.setState({
+    //           index: this.state.index - 1
+    //          })
+    //     }
+    //   }
 
     render() {
-        return (<div>
-            <h1 className="text-center" > Welcome Polarians! </h1>
-            <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Lets get learning!!! </p>
-            {this.state.quiz && console.log(this.state.quiz)}
-
-            {this.state.quiz &&
-
-            <div> {this.state.quiz.map((question, iterator) => {
-                console.log(question)
-                return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
-            })} </div>
-            }    
+        
+        if(this.state.quiz.length > 1){
            
-
-        </div>)
+            return (<div>
+                <h1 className="text-center" > Welcome Polarians! </h1>
+                <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Lets get learning!!! </p>
+                {/* {this.state.quiz.length > 0 && console.log(this.state.quiz[this.state.index])} */}
+    
+            
+                    
+                
+                 <QuizQuestion questionNum={this.state.index} quiz={this.state.quiz[this.state.index]} text={this.state.text} handleClick={this.handleClick}/>
+    
+                
+                 
+    
+                 
+              
+    
+                {/* // <div> {this.state.quiz.map((question, iterator) => { */
+                /* //     console.log(question)
+                //     return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
+                // })} </div> */}
+            
+               
+    
+            </div>)
+        }else{
+            return (
+                <div>
+                    <h1>You're Quiz Will Begin Shortly</h1>
+                </div>
+            )
+        }
+        
     }
 
 }
