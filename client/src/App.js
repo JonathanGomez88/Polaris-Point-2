@@ -42,7 +42,7 @@ class App extends React.Component {
             {this.state.auth ? <NavSignedIn logOutUser={this.logOutUser}/> : <NavSignedOut/>}
             <Switch>
                 <Route path="/login" render={() => <Login grabUserInfo={this.grabUserInfo}/>}/>
-                <Route path="/SignUp" component={SignUpPage}/>
+                <Route path="/signup" component={SignUpPage}/>
                 <Route exact path = "/" render={() => <Home user={this.state.user}/>}/> 
                 <Route exact path = "/about" component = {About}/> 
                 <Route exact path = "/accounts" render={() => <Accounts user={this.state.user}/>}/> /> 
