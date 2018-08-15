@@ -45,7 +45,7 @@ class App extends React.Component {
                 <Route path="/SignUp" component={SignUpPage}/>
                 <Route exact path = "/" render={() => <Home user={this.state.user}/>}/> 
                 <Route exact path = "/about" component = {About}/> 
-                <Route exact path = "/accounts" component = {Accounts}/> 
+                <Route exact path = "/accounts" render={() => <Accounts user={this.state.user}/>}/> /> 
                 <Route exact path = "/contact" component = {Contact}/> 
                 <Route exact path = "/learn" component = {Learn}/>
             </Switch>

@@ -1,5 +1,5 @@
 import React from "react";
-import Learn from "../pages/Learn";
+
 
 const QuizQuestion = (props) => {
 
@@ -8,28 +8,30 @@ const QuizQuestion = (props) => {
         return (
             <div >
                 
-           <p>{props.text}</p>
-           <form >
+           <p>{props.quiz.text}</p>
+           <form onSubmit={(event) => {
+               event.preventDefault();
+               console.log(event);
+               const { value } = event.target
+               console.log(value)
+                props.handleClick();
+           }}>
                <div>
                    {props.quiz.Answers.map((answer) => {
                        return (
                            <div>
-                               <input id={answer.id} key={answer.id} type="radio" value={answer.isCorrect} name={props.questionNum} />
+                               <input className="radio" id={answer.id} key={answer.id} type="radio" value={answer.isCorrect} name={props.questionNum} />
                                <label htmlFor={answer.id}>{answer.text}</label>
                            </div>
                        )
                    })}
-                   
-       
-                   
+                    
                </div>
-       
+                   <input id="submit" type="submit"/>
            </form>
-           <button onClick={() => props.handleClick()}>Next</button>
-       
-       
            </div>
-       );
-} 
+           // s   <button onClick={() => props.handleClick()}>Next</button>
+        );
+    } 
 
 export default QuizQuestion;
