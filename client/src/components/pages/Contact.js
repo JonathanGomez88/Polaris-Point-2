@@ -38,7 +38,7 @@ const Contact = props => (
     <div>
         <div className="content">
             <div className="contactContent">
-                <h1> Contact Page </h1>
+                <h1> Contact Us </h1>
                 <p>
                     Send us an email to get in contact with us!
                 </p>
