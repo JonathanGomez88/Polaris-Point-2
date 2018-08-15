@@ -1,4 +1,5 @@
 import React from "react";
+import image from '../../../public/images/line'
 import "./Home.css"
 
 const Home = (props) => (
