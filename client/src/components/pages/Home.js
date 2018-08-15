@@ -21,10 +21,10 @@ const Home = (props) => (
                         </div>
                         <div className="widgetName" id="widgetName">
 
-                            <h3> Users Name </h3>
+                            <h3> {props.user.firstName} {props.user.lastName} </h3>
                             <h6 className="gemsTotal" id="gemsTotal">My Account</h6>
 
-                            <h3> {props.user.firstName}</h3>
+                            <h3> {props.user.email}</h3>
                             <h6 className="gemsTotal" id="gemsTotal">Gems: 20</h6>
 
                             <br />
@@ -57,7 +57,7 @@ const Home = (props) => (
                         <div>
                             <div className="container homeContainer">
                                 <div className="introBanner" id="introBanner">
-                                    <h2 id="welcomeUsername">Welcome: {props.user.email}</h2>
+                                    <h2 id="welcomeUsername">Welcome: {props.user.firstName} {props.user.lastName}</h2>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm">

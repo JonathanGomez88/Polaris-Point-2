@@ -3,24 +3,15 @@ import API from "../utils/API";
 import QuizQuestion from "../pageComponents/quizQuestions";
 
 
-
-// const canvasStyle = {
-//     height: '400px',
-//     width: '750px',
-//     background: 'black',
-//     marginLeft: '18%',
-//     marginRight: '18%'
-// }
-
-
 class Learn extends Component {
     state = {
         quiz: [],
         text: '',
         category: "Astronomy",
-        index: 0
+        index: 0,
+        startQuiz: false,
+        endQuiz: false
     }
-
     renderQuiz = (category) => {
         console.log("RENDER QUIZ RAN");
         API.getQuiz(category)
@@ -36,20 +27,14 @@ class Learn extends Component {
                         category: "Astronomy"
                     })
                 }
-            }
-
-            ).catch(err => {
+            }).catch(err => {
                 console.log(err)
             });
     }
-
     componentWillMount() {
         this.renderQuiz(this.state.category);
 
     }
-
-
-
     componentDidUpdate() {
         console.log("compent update: ", this.state);
     }
@@ -61,66 +46,60 @@ class Learn extends Component {
 
     handleClick = () => {
 
-        let updatedIndex = this.state.index + 1;
 
-        if (this.state.index < this.state.quiz.length) {
+        if (this.state.index < this.state.quiz.length - 1) {
             this.setState({
-                index: updatedIndex,
-                text: this.state.quiz[updatedIndex].text
+                index: this.state.index + 1,
+
             })
         }
+        else {
+            this.setState({
+                endQuiz: true
+            })
+        }
+    }
+
+    handleCorrect = () => {
 
     }
 
-    //     if (this.state.index === this.state.quiz.length - 1){
-    //        this.setState({
-    //           index: 0
-    //          })
-    //     }
-    //     else{
-    //         this.setState({
-    //           index: this.state.index - 1
-    //          })
-    //     }
-    //   }
+
+    answerValue = (event) => {
+        const { value } = event.target;
+        console.log(value)
+    }
+
+
 
     render() {
+        const { endQuiz, quiz } = this.state;
         console.log("render ran");
-        if (this.state.quiz.length > 1) {
-            console.log("this should run now");
-            return (<div>
-                <h1 className="text-center" > Welcome Polarians! </h1>
-                <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Lets get learning!!! </p>
-                {/* {this.state.quiz.length > 0 && console.log(this.state.quiz[this.state.index])} */}
+        return (
+            <div id="quiz">
+                {!endQuiz ?
+                    (quiz.length) > 1 ?
+                        <div>
+                            <h1 className="text-center" > Astronomy </h1>
+                            <p> Shoot for the Moon. Even if you miss, you will land among the stars </p>
+
+                            <QuizQuestion questionNum={this.state.index} quiz={this.state.quiz[this.state.index]} handleClick={this.handleClick} />
+
+                        </div>
+                        :
+                        <div>
+                            <h1>Your Quiz Will Begin Shortly</h1>
+                        </div>
 
 
-
-
-                <QuizQuestion questionNum={this.state.index} quiz={this.state.quiz[this.state.index]} text={this.state.text} handleClick={this.handleClick} />
-
-
-
-
-
-
-
-                {/* // <div> {this.state.quiz.map((question, iterator) => { */
-                /* //     console.log(question)
-                //     return <QuizQuestion key={iterator} questionNum={iterator} quiz={question}/>
-                // })} </div> */}
-
-
-
-            </div>)
-        } else {
-            return (
-                <div>
-                    <h1>You're Quiz Will Begin Shortly</h1>
-                </div>
-            )
-        }
-
+                    :
+                    <div id="quizOver">Nice job! You got 100%</div>
+                }
+            </div>
+        )
     }
+
+
 
 }
 export default Learn;

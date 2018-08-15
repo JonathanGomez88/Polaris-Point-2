@@ -1,7 +1,7 @@
 import React from "react";
 import "./Accounts.css"
 
-const Accounts = () => (
+const Accounts = (props) => (
     <div>
         <div className="head" id="head">
             <header>
@@ -19,7 +19,7 @@ const Accounts = () => (
                             <img id="placeholder" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/default-profile-picture-icon.jpg" />
                         </div>
                         <div className="widgetName" id="widgetName">
-                            <h3> Users Name </h3>
+                            <h3> {props.user.firstName} {props.user.lastName} </h3>
                             <h6 className="gemsTotal" id="gemsTotal">My Account</h6>
                             <br />
                             <div className="catalogContainer" id="catalogContainer">
@@ -64,19 +64,19 @@ const Accounts = () => (
                                                     <tr>
                                                         <th scope="row"></th>
                                                         <td>First Name: </td>
-                                                        <td>Dan</td>
+                                                        <td>{props.user.firstName}</td>
                                                         <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row"></th>
                                                         <td>Last Name</td>
-                                                        <td>Jones</td>
+                                                        <td>{props.user.lastName}</td>
                                                         <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row"></th>
                                                         <td>Email Address: </td>
-                                                        <td>username@email.com</td>
+                                                        <td>{props.user.email}</td>
                                                         <td></td>
                                                     </tr>
                                                 </tbody>
