@@ -11,6 +11,7 @@ class Learn extends Component {
         category: "Astronomy",
         index: 0,
         startQuiz: false,
+        article: "String article about astronomy",
         endQuiz: false
     }
     renderQuiz = (category) => {
@@ -65,6 +66,13 @@ class Learn extends Component {
 
     }
 
+    initializeQuiz() {
+        // this.setState({
+        //     startQuiz: true
+        // })
+        console.log("click event: ", this.state)
+    }
+
 
     answerValue = (event) => {
         const { value } = event.target;
@@ -75,32 +83,46 @@ class Learn extends Component {
 
     render() {
         const { endQuiz, quiz } = this.state;
-        console.log("render ran");
-        return (
-            <div id="quiz">
-                {!endQuiz ?
-                    (quiz.length) > 1 ?
-                        <div>
-                            <h1 className="text-center" > Astronomy </h1>
-                            <p> Shoot for the Moon. Even if you miss, you will land among the stars </p>
 
-                            <QuizQuestion questionNum={this.state.index} quiz={this.state.quiz[this.state.index]} handleClick={this.handleClick} />
+      
+            console.log("render ran");
+            return (
+                <div id="quiz">
+                    {!endQuiz ?
+                        (quiz.length) > 1 ?
+                            <div>
+                                <h1 className="text-center" > Astronomy </h1>
+                                <p> Shoot for the Moon. Even if you miss, you will land among the stars </p>
 
-                        </div>
+                                <QuizQuestion questionNum={this.state.index} quiz={this.state.quiz[this.state.index]} handleClick={this.handleClick} />
+
+                            </div>
+                            :
+                            <div>
+                                <h1>Your Quiz Will Begin Shortly</h1>
+                            </div>
+
+
                         :
-                        <div>
-                            <h1>Your Quiz Will Begin Shortly</h1>
-                        </div>
-
-
-                    :
-                    <div id="quizOver">Nice job! You got 100%</div>
-                }
-            </div>
-        )
+                        <div id="quizOver">Nice job! You got 100%</div>
+                    }
+                </div>
+            )
+       
     }
 
 
 
 }
 export default Learn;
+
+
+// else {
+//     return (
+//         <div>
+//             {this.state.article}
+
+//             <button onClick={this.setState({ startQuiz: true })}>Start Quiz</button>
+//         </div>
+//     )
+// }
