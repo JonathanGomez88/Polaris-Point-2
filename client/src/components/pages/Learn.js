@@ -47,17 +47,6 @@ class Learn extends Component {
     
     }
 
-    
-
-    componentDidUpdate(){
-        console.log("compent update: ", this.state);
-    }
-
-    componentDidMount(){
-        
-        console.log("initial state: ", this.state);
-    }
-
     handleClick = () => {
 
         let updatedIndex = this.state.index + 1;
@@ -67,6 +56,8 @@ class Learn extends Component {
                 index: updatedIndex,
                 text: this.state.quiz[updatedIndex].text
             })
+        }else{
+            // put in a results page here
         }
 
     }
@@ -84,9 +75,9 @@ class Learn extends Component {
     //   }
 
     render() {
-        console.log("render ran");
+        
         if(this.state.quiz.length > 1){
-            console.log("this should run now");
+           
             return (<div>
                 <h1 className="text-center" > Welcome Polarians! </h1>
                 <p> People have long been struggling to learn new material, so we incorperated our favorite method of learning, and applied it to our website.Here you can track your progress, learn new material, and have fun doing so!Lets get learning!!! </p>
