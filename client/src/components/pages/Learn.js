@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import QuizQuestion from "../pageComponents/QuizQuestions";
+import QuizQuestion from "../pageComponents/quizQuestions";
 
 
 
@@ -51,13 +51,14 @@ class Learn extends Component {
 
         let updatedIndex = this.state.index + 1;
 
-        if(this.state.index < this.state.quiz.length){
+        if(this.state.index < this.state.quiz.length - 1){
             this.setState({
                 index: updatedIndex,
                 text: this.state.quiz[updatedIndex].text
             })
         }else{
             // put in a results page here
+
         }
 
     }
