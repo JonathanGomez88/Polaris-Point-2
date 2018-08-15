@@ -10,7 +10,7 @@ const NavSignedOut = () => {
     
         <li className="nav-item"><Link to="/SignUp"
             className={
-                window.location.pathname === "/SignUp" ? "nav-link active" : "nav-link"}
+                window.location.pathname === "/signup" ? "nav-link active" : "nav-link"}
         >Sign Up</Link></li>
         <li className="nav-item"><Link to="/login"
             className={
