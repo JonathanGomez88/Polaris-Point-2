@@ -36,11 +36,11 @@ const styledDivM = {
 
 const Contact = props => (
     <div>
-        <div className="container">
-            <div className="contentContainer">
-                <h1> Contact Page </h1>
+        <div className="content">
+            <div className="contactContent">
+                <h1> Contact Us </h1>
                 <p>
-                   Send us an email to get in contact with us!
+                    Send us an email to get in contact with us!
                 </p>
                 <div>
                     <form>
@@ -55,6 +55,12 @@ const Contact = props => (
                         <div>
                             <label>Name</label>
                             <textarea id="subject" name="subject" placeholder="Write something.." />
+                        </div>
+                        <div>
+                            <button type="button" className="btn btn-primary ">Submit</button>
+                        </div>
+                        <div className="thankYouContact">
+                            <p>Thank you for taking the time to contact Polaris Point, please allow a few hours to one day for Polaris Point to respond. We are here to give you the best possible educational experience. Thank you and happy learning!</p>
                         </div>
 
                     </form>
