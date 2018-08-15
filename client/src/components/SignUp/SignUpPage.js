@@ -39,26 +39,26 @@ class SignUpPage extends Component {
     } else {
       axios.post("/api/user/signup", this.state)
         .then(res => {
-            console.log(res)
-            this.setState({
-              firstName: "",
-              lastName: "",
-              email: "",
-              password: ""
-            });
-            this.props.history.push('/login')
-          }).catch(err =>{
-            console.log(err)
-          })
+          console.log(res)
+          this.setState({
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: ""
+          });
+          this.props.history.push('/login')
+        }).catch(err => {
+          console.log(err)
+        })
     }
 
-    
+
   };
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      < div className="content" >
+      < div className="content signinContent" >
         <p className="introduction">
           Please Enter Your Info To Sign Up {this.state.firstName} {this.state.lastName}
         </p>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Accounts.css"
 
 const Accounts = () => (
     <div>
@@ -47,7 +48,7 @@ const Accounts = () => (
                     </div>
                     <div className="col-8">
                         <div>
-                            <div className="container">
+                            <div className="container accountContainer">
                                 <div className="introBanner" id="introBanner">
                                     <h2 id="welcome">My Account</h2>
                                 </div>

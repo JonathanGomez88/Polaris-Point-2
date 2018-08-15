@@ -36,11 +36,11 @@ const styledDivM = {
 
 const Contact = props => (
     <div>
-        <div className="container">
-            <div className="contentContainer">
+        <div className="content">
+            <div className="contactContent">
                 <h1> Contact Page </h1>
                 <p>
-                   Send us an email to get in contact with us!
+                    Send us an email to get in contact with us!
                 </p>
                 <div>
                     <form>
