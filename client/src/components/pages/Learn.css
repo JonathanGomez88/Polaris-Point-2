@@ -1,0 +1,22 @@
+#quiz{
+    padding-left: 15px;
+    color: white;
+    padding-right:15px
+}
+
+.text-center{
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+p{
+    font-size: 20px
+}
+
+#submit{
+    background: antiquewhite
+}
+.radio{
+    background: antiquewhite;
+    padding-right: 3px
+}
