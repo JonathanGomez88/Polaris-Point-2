@@ -3,6 +3,7 @@ import API from "../utils/API";
 import QuizQuestion from "../pageComponents/quizQuestions";
 import "./Learn.css"
 
+
 class Learn extends Component {
     state = {
         quiz: [],
