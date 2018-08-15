@@ -55,7 +55,7 @@ const Home = (props) => (
                     <div className="col-8">
 
                         <div>
-                            <div className="container">
+                            <div className="container homeContainer">
                                 <div className="introBanner" id="introBanner">
                                     <h2 id="welcomeUsername">Welcome: {props.user.firstName} {props.user.lastName}</h2>
                                 </div>
