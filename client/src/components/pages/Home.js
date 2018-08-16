@@ -1,7 +1,13 @@
 import React from "react";
 import "./Home.css"
+import {
+    Link
+} from "react-router-dom";
+
+function learnPath () {<Link to="/learn" className={window.location.pathname === "/learn"}/>}
 
 const Home = (props) => (
+
 
     <div>
         <div className="head" id="head">
@@ -48,7 +54,9 @@ const Home = (props) => (
                             </div>
                         </div>
                         <div className="findCourseWidget" id="findCourseWidget">
+                            <Link to="/learn">
                             <button type="button" className="btn btn-primary" id="findCourseButton">Start/Unlock New Course</button>
+                            </Link>
                         </div>
 
                     </div>
