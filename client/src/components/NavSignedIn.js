@@ -29,13 +29,13 @@ const NavSignedIn = (props) => {
                     window.location.pathname === "/contact" ? "nav-link active" : "nav-link"
                 } >
                 Contact </Link> </li>
-        <li className="nav-item" >
+        {/* <li className="nav-item" >
             <Link to="/learn"
                 className={
                     window.location.pathname === "/learn" ? "nav-link active" : "nav-link"
                 } >
                 Learn </Link>
-        </li>
+        </li> */}
         <li className="nav-item" onClick={() => props.logOutUser()}>
             <Link to="/" className={
                 window.location.pathname === "/login" ? "nav-link active" : "nav-link"
