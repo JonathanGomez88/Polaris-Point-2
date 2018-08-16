@@ -7,15 +7,7 @@ const About = () => (
       <div className="aboutContent">
         <h1>About Polaris Point</h1>
         <p>
-          Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui mauris,
-          ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus porta. Nam
-          quis arcu non lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
-          diam, sit amet facilisis lectus blandit at.Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui mauris,
-          ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus porta. Nam
-          quis arcu non lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-          imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
-          diam, sit amet facilisis lectus blandit at.
+          Polaris Point is a non-profit organization dedicated to helping students progress in their studies.  We believe that no child should be left behind and because we live in the information age where information overload can hinder progress, we developed a fun and interactive alternative to guide students with simple, easy to understand articles.  If you have any issues with our website please don't hesitate to let us know in the contact section.
     </p>
       </div>
     </div>
