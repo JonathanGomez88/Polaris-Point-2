@@ -1,11 +1,11 @@
 import React from "react";
-import image from '../../../public/images/line'
+// import image from '../../../public/images/line'
 import "./Home.css"
 import {
     Link
 } from "react-router-dom";
 
-function learnPath () {<Link to="/learn" className={window.location.pathname === "/learn"}/>}
+function learnPath() { <Link to="/learn" className={window.location.pathname === "/learn"} /> }
 
 const Home = (props) => (
 
@@ -56,7 +56,7 @@ const Home = (props) => (
                         </div>
                         <div className="findCourseWidget" id="findCourseWidget">
                             <Link to="/learn">
-                            <button type="button" className="btn btn-primary" id="findCourseButton">Start/Unlock New Course</button>
+                                <button type="button" className="btn btn-primary" id="findCourseButton">Start/Unlock New Course</button>
                             </Link>
                         </div>
 
