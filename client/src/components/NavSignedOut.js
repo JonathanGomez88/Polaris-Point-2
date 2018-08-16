@@ -10,7 +10,7 @@ const NavSignedOut = () => {
     
         <li className="nav-item"><Link to="/SignUp"
             className={
-                window.location.pathname === "/signup" ? "nav-link active" : "nav-link"}
+                window.location.pathname === "/SignUp" ? "nav-link active" : "nav-link"}
         >Sign Up</Link></li>
         <li className="nav-item"><Link to="/login"
             className={
@@ -39,13 +39,13 @@ const NavSignedOut = () => {
                     window.location.pathname === "/contact" ? "nav-link active" : "nav-link"
                 } >
                 Contact </Link> </li>
-        <li className="nav-item" >
+        {/* <li className="nav-item" >
             <Link to="/learn"
                 className={
                     window.location.pathname === "/learn" ? "nav-link active" : "nav-link"
                 } >
                 Learn </Link>
-        </li>
+        </li> */}
     
     </ul>
     )

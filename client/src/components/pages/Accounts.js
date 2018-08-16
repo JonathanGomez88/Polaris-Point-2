@@ -27,15 +27,15 @@ const Accounts = (props) => (
                                     <div className="row">
                                         <div className="col">
                                             <h5>My Courses</h5>
-                                            <p>Astronomy 101</p>
-                                            <p>Geometry 101</p>
+                                            <p>Astronomy</p>
+                                            <p>Geometry</p>
                                             <p>World Cvilization</p>
                                         </div>
                                         <div className="col">
                                             <h5>Completion</h5>
-                                            <p>76%</p>
-                                            <p>21%</p>
-                                            <p>24%</p>
+                                            <p>100</p>
+                                            <p>90%</p>
+                                            <p>90%</p>
                                         </div>
                                     </div>
                                 </div>
@@ -90,19 +90,19 @@ const Accounts = (props) => (
                                                 <tbody>
                                                     <tr>
                                                         <th scope="row"></th>
-                                                        <td>Astronomy 101</td>
+                                                        <td>Astronomy</td>
                                                         <td><button type="button" className="btn btn-primary" id="editCourse">remove</button></td>
                                                         <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row"></th>
-                                                        <td>Geometry 101</td>
+                                                        <td>Geometry</td>
                                                         <td><button type="button" className="btn btn-primary" id="editCourse">remove</button></td>
                                                         <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row"></th>
-                                                        <td>World Civilization 101</td>
+                                                        <td>World Civilization</td>
                                                         <td><button type="button" className="btn btn-primary" id="editCourse">remove</button></td>
                                                         <td></td>
                                                     </tr>
