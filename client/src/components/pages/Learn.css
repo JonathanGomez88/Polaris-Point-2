@@ -9,14 +9,34 @@
     padding-bottom: 10px;
     padding-top: 10px
 }
+
+.quizContent {
+    text-align: center;
+}
+
 p{
     font-size: 20px
 }
 
 #submit{
-    background: antiquewhite
+    background: linear-gradient(to bottom,#5e3485,#42245e);
+    border-style: solid;
+    border-width: 3px;
+    border-color: #9c7bb8; 
 }
 .radio{
     background: antiquewhite;
     padding-right: 3px
+}
+
+#article {
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+    background-color: #faf6e1;
+    color: #2c2c2c !important;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 25px;
 }
