@@ -1,7 +1,13 @@
 import React from "react";
 import "./Home.css"
+import {
+    Link
+} from "react-router-dom";
+
+function learnPath () {<Link to="/learn" className={window.location.pathname === "/learn"}/>}
 
 const Home = (props) => (
+
 
     <div>
         <div className="head" id="head">
@@ -33,22 +39,24 @@ const Home = (props) => (
                                     <div className="row">
                                         <div className="col">
                                             <h5>My Courses</h5>
-                                            <p>Astronomy 101</p>
-                                            <p>Geometry 101</p>
+                                            <p>Astronomy</p>
+                                            <p>Geometry</p>
                                             <p>World Cvilization</p>
                                         </div>
                                         <div className="col">
-                                            <h5>Completion</h5>
-                                            <p>76%</p>
-                                            <p>21%</p>
-                                            <p>24%</p>
+                                            <h5>Score</h5>
+                                            <p>100%</p>
+                                            <p>90%</p>
+                                            <p>90%</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="findCourseWidget" id="findCourseWidget">
+                            <Link to="/learn">
                             <button type="button" className="btn btn-primary" id="findCourseButton">Start/Unlock New Course</button>
+                            </Link>
                         </div>
 
                     </div>
@@ -67,7 +75,7 @@ const Home = (props) => (
                                         <button type="button" className="btn btn-primary containerButtons">Start New Course</button>
                                     </div>
                                     <div className="col-sm">
-                                        <button type="button" className="btn btn-primary containerButtons">Find Course</button>
+                                        <button type="button" className="btn btn-primary containerButtons">Check Progess</button>
                                     </div>
                                 </div>
                                 <div className="blog" id="blog">
@@ -78,10 +86,7 @@ const Home = (props) => (
                                         <ul>
                                             <li>
                                                 <h5>New Calulus Course is here!</h5>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate quas
-                                                  mollitia accusantium architecto natus provident deleniti doloribus repudiandae
-                                                  quaerat? Natus rem dignissimos totam quas aspernatur architecto quod repellendus?
-                                                  Illo!
+                                                <p>Students who excel in math and would like to sharpen their skills will be very glad for our latest update.
                         </p>
                                             </li>
                                             <li>
